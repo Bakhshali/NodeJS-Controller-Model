@@ -21,8 +21,21 @@ const webuserController = {
         const data = await User.findById(id)
         resp.send(data)
     },
+    delete: async (req, resp) => {
+        const id = req.params.id
+        const data = await User.findByIdAndDelete(id)
+        resp.send(data)
+    },
+    edit: async (req, resp) => {
+        const id = req.params.id
+        const data = await User.findByIdAndUpdate(id, {
+            name: req.body.name,
+            surname: req.body.surname
+        })
+        resp.send(data)
+    },
 
-  login: async (req, resp) => {
+    login: async (req, resp) => {
         const loginUser = await User.find({
             email: req.body.email,
             password: req.body.password

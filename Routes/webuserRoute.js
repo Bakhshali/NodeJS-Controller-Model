@@ -15,6 +15,8 @@ router.post("/",
     webuserController.add)
 
 router.get("/", webuserController.getAll)
+router.delete("/:id", webuserController.delete)
+router.put("/:id", webuserController.edit)
 
 router.post("/login",
     [body("email").notEmpty().withMessage("Email is required!")],

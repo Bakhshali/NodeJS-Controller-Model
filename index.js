@@ -2,7 +2,7 @@ const express = require("express")
 const app = express()
 const { default: mongoose } = require("mongoose")
 
-mongoose.connect("mongodb+srv://Bakshali01:roma9999@cluster0.q0vnezp.mongodb.net/")
+mongoose.connect("mongodb+srv://Bakshali01:eliko9999@cluster0.q0vnezp.mongodb.net/")
 
 app.use(express.json())
 
